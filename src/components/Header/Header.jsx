@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import { Autocomplete } from "@react-google-maps/api";
-import { AppBar, Toolbar, Typography, InputBase, Box } from "@material-ui/core";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  InputBase,
+  Box,
+  Switch,
+  FormGroup,
+  FormControlLabel,
+} from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import useStyles from "./styles";
 
-const Header = ({ setCoordinates }) => {
+const Header = ({ setCoordinates, setHideMap, hideMap }) => {
   const [autoComplete, setAutoComplete] = useState(null);
 
   const classes = useStyles();
@@ -24,6 +33,18 @@ const Header = ({ setCoordinates }) => {
           <Typography variant="h5" className={classes.title}>
             Know The Place
           </Typography>
+          <FormGroup>
+            <FormControlLabel
+              control={
+                <Switch
+                  defaultChecked
+                  size="small"
+                  onChange={() => setHideMap(!hideMap)}
+                />
+              }
+              label="Map"
+            />
+          </FormGroup>
           <Box display="flex">
             <Typography variant="h6" className={classes.title}>
               Explore New Places

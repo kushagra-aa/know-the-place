@@ -33,8 +33,8 @@ const Map = ({ setCoordinates, setBounds, coordinates, weatherData }) => {
           {weatherData?.list?.map((data, i) => (
             <div key={i} lat={data.coord.lat} lng={data.coord.lng}>
               <img
-                height="100"
-                src={`https://openweathermap.org/w/${data.weather[0].icon}.png`}
+                height="50"
+                src={`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`}
                 alt={data.weather[0].icon}
               />
             </div>

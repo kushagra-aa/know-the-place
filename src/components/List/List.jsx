@@ -11,14 +11,22 @@ import {
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 import useStyles from "./styles";
 
-const List = ({ places, isLoading, type, setType, rating, setRating }) => {
+const List = ({
+  places,
+  isLoading,
+  type,
+  setType,
+  rating,
+  setRating,
+  hideMap,
+}) => {
   const classes = useStyles();
 
   return (
     <>
       <div className={classes.container}>
-        <Typography variant="h4">
-          Restaurants,Hotels And Places Arround You
+        <Typography className={classes.title} variant="h4">
+          {type} Arround You
         </Typography>
         {isLoading ? (
           <div className={classes.loading}>
@@ -46,7 +54,11 @@ const List = ({ places, isLoading, type, setType, rating, setRating }) => {
                 <MenuItem vlaue={4.5}>Above 4.5</MenuItem>
               </Select>
             </FormControl>
-            <Grid container spacing={3} className={classes.list}>
+            <Grid
+              container
+              spacing={3}
+              className={`${classes.list} ${!hideMap ? "" : classes.grid}`}
+            >
               {places?.map((place, i) => (
                 <Grid item key={i} xs={12}>
                   <PlaceDetails place={place} />

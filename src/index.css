@@ -1,5 +1,41 @@
+:root {
+  --primary1: #171d28;
+  --primary2: #5800ff;
+  --primary3: #01f5ea;
+  --secondary: #e900ff;
+  --accent: #ffc600;
+}
+::-moz-selection {
+  color: var(--primary2);
+  background: var(--accent);
+}
+/* Code for Firefox */
+::selection {
+  color: var(--primary2);
+  background: var(--accent);
+}
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  color: var(--primary3);
+}
+*::-webkit-scrollbar {
+  width: 0.25em;
+  height: 10%;
+}
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 5rem;
+}
+
+body {
+  background: var(--primary1) !important;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
