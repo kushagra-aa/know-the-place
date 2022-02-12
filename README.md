@@ -24,6 +24,8 @@ Built with 🤍 For You!
 ### Main Page
 
 ![page screenshot](https://user-images.githubusercontent.com/68841296/153708287-7c3b6013-1f4c-4edf-a960-dad193f80fa9.png)
+![image](https://user-images.githubusercontent.com/68841296/153708623-d3789dc4-8c7e-4435-8d4e-368d5f952c92.png)
+
 
 ## Made using
 
