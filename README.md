@@ -5,6 +5,8 @@
 Know The Place a Travel Buddy Web Application
 
 A user can view Places near their location.
+> Restaurants, Hotels and Attractions
+
 > uses google maps api
 
 > maps api not working because of some billing issues
