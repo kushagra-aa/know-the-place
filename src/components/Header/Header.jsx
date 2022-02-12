@@ -36,19 +36,12 @@ const Header = ({ setCoordinates, setHideMap, hideMap }) => {
           <FormGroup>
             <FormControlLabel
               control={
-                <Switch
-                  defaultChecked
-                  size="small"
-                  onChange={() => setHideMap(!hideMap)}
-                />
+                <Switch size="small" onChange={() => setHideMap(!hideMap)} />
               }
               label="Map"
             />
           </FormGroup>
           <Box display="flex">
-            <Typography variant="h6" className={classes.title}>
-              Explore New Places
-            </Typography>
             <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
               <div className={classes.search}>
                 <div className={classes.searchIcon}>

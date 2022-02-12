@@ -20,7 +20,7 @@ const PlaceDetails = ({ place }) => {
     <>
       <Card elevation={6} className={classes.card}>
         <CardMedia
-          styles={{ height: 400 }}
+          styles={{ height: 200 }}
           image={
             place.photo
               ? place.photo.images.large.url
@@ -34,10 +34,18 @@ const PlaceDetails = ({ place }) => {
           </Typography>
           <Box display="flex" justifyContent="space-between">
             <Typography variant="subtitle1" className={classes.price}>
+              Distance
+            </Typography>
+            <Typography variant="subtitle1" gutterBottom>
+              {place.distance_string}
+            </Typography>
+          </Box>
+          <Box display="flex" justifyContent="space-between">
+            <Typography variant="subtitle1" className={classes.price}>
               Price
             </Typography>
             <Typography variant="subtitle1" gutterBottom>
-              {place.price_level}
+              {place.price_level ? place.price_level : "--"}
             </Typography>
           </Box>
           <Box display="flex" justifyContent="space-between">

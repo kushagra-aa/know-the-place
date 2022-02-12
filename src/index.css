@@ -2,23 +2,24 @@
   --primary1: #171d28;
   --primary2: #5800ff;
   --primary3: #01f5ea;
-  --secondary: #e900ff;
+  --secondary: #006f9b;
   --accent: #ffc600;
 }
 ::-moz-selection {
-  color: var(--primary2);
-  background: var(--accent);
+  color: var(--primary1);
+  background: var(--primary3);
 }
 /* Code for Firefox */
 ::selection {
-  color: var(--primary2);
-  background: var(--accent);
+  color: var(--primary1);
+  background: var(--primary3);
 }
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   color: var(--primary3);
+  transition: all 0.5s ease-in-out;
 }
 *::-webkit-scrollbar {
   width: 0.25em;

@@ -21,7 +21,12 @@ const List = ({
   hideMap,
 }) => {
   const classes = useStyles();
-
+  const handleTypeChange = (e) => {
+    setType(e.target.value);
+  };
+  const handleRatingChange = (e) => {
+    setRating(e.target.value);
+  };
   return (
     <>
       <div className={classes.container}>
@@ -35,23 +40,20 @@ const List = ({
         ) : (
           <>
             <FormControl className={classes.formControl}>
-              <InputLabel>Type</InputLabel>
-              <Select vlaue={type} onChange={(e) => setType(e.target.value)}>
-                <MenuItem vlaue="restaurants">Restaurants</MenuItem>
-                <MenuItem vlaue="hotels">Hotels</MenuItem>
-                <MenuItem vlaue="attractions">Attractions</MenuItem>
+              <InputLabel id="type">Type</InputLabel>
+              <Select id="type" value={type} onChange={handleTypeChange}>
+                <MenuItem value="restaurants">Restaurants</MenuItem>
+                <MenuItem value="hotels">Hotels</MenuItem>
+                <MenuItem value="attractions">Attractions</MenuItem>
               </Select>
             </FormControl>
             <FormControl className={classes.formControl}>
-              <InputLabel>Rating</InputLabel>
-              <Select
-                vlaue={rating}
-                onChange={(e) => setRating(e.target.value)}
-              >
-                <MenuItem vlaue={0}>All</MenuItem>
-                <MenuItem vlaue={3}>Above 3.0</MenuItem>
-                <MenuItem vlaue={4}>Above 4.0</MenuItem>
-                <MenuItem vlaue={4.5}>Above 4.5</MenuItem>
+              <InputLabel id="rating">Rating</InputLabel>
+              <Select id="rating" value={rating} onChange={handleRatingChange}>
+                <MenuItem value="">All</MenuItem>
+                <MenuItem value="3">Above 3.0</MenuItem>
+                <MenuItem value="4">Above 4.0</MenuItem>
+                <MenuItem value="4.5">Above 4.5</MenuItem>
               </Select>
             </FormControl>
             <Grid
