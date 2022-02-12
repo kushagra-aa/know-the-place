@@ -16,14 +16,14 @@ Hosted On <u> Netlify </u>
 Built with 🤍 For You!
 
 <a target="_blank" href="https://know-the-place.netlify.app/">
-  <img src="https://user-images.githubusercontent.com/68841296/146169520-a70cab10-2ac3-46e6-90e2-739fa59f8cc4.png"/ width="150px" height="50px">
+  <img src="https://user-images.githubusercontent.com/68841296/153708399-79c90c32-2e06-4681-b038-6d82b54eb055.png" width="180px" height="50px">
 </a>
 
 ## Screenshots
 
-### Home Page
+### Main Page
 
-![image](https://user-images.githubusercontent.com/68841296/146168785-d5fe48fd-b4c0-4f0d-a6a1-bd6d144594d0.png)
+![page screenshot](https://user-images.githubusercontent.com/68841296/153708287-7c3b6013-1f4c-4edf-a960-dad193f80fa9.png)
 
 ## Made using
 
